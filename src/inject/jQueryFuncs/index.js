@@ -2,6 +2,8 @@ const queueName = 'buttonQueue';
 const queueHolder = $(document);
 const queueButton = $('#execute-queue');
 
+const consoleStyle = 'color: green';
+
 let modalShouldBeHidden = true;
 
 queueButton.click(function (event) {
@@ -19,7 +21,7 @@ queueButton.click(function (event) {
 
         document.dispatchEvent(event);
 
-        console.log('From DOM: toggleModal event triggered');
+        console.log('%c From DOM: toggleModal event triggered', consoleStyle);
         setTimeout(function () {
             next();
         }, 1000);
@@ -31,7 +33,7 @@ queueButton.click(function (event) {
 
             document.dispatchEvent(event);
 
-            console.log('From DOM: queued1 event triggered');
+            console.log('%c From DOM: queued1 event triggered', consoleStyle);
             setTimeout(function () {
                 next();
             }, 1000);
@@ -42,7 +44,7 @@ queueButton.click(function (event) {
 
             document.dispatchEvent(event);
 
-            console.log('From DOM: queued2 event triggered');
+            console.log('%c From DOM: queued2 event triggered', consoleStyle);
             setTimeout(function () {
                 next();
             }, 1000);
@@ -58,5 +60,5 @@ queueButton.click(function (event) {
 });
 
 document.addEventListener('toggleModal', function () {
-    console.log('From DOM: Button clicked!');
+    console.log('%c From DOM: Button clicked!', consoleStyle);
 });

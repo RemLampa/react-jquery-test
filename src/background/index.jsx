@@ -1,1 +1,1 @@
-console.log('Hello Background Scripts!');
+console.log('%c Hello Background Scripts!', 'color: orange');
