@@ -25,7 +25,15 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         inject: [ './inject/index.jsx', './inject/common.scss' ],
-        background: [ './background/index.jsx' ]
+        background: [ './background/index.jsx' ],
+        vendor: [
+            'jquery',
+            'react',
+            'react-dom',
+            'react-redux',
+            'react-shadow',
+            'redux'
+        ]
     },
     output: {
         path: path.resolve(__dirname, buildFolder),
@@ -113,7 +121,8 @@ module.exports = {
             allChunks: true
         }),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
+            names: ['vendor', 'common'],
+            minChunks: Infinity
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
