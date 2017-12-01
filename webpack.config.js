@@ -43,12 +43,16 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                include: [/node_modules\/dom7/, /src\/js/],
+                include: [
+                    /node_modules\/dom7/,
+                    /src\/inject/,
+                    /src\/background/
+                ],
                 use: [
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['es2015', 'env', 'react']
+                            presets: ['es2015', 'env', 'react', 'stage-0']
                         }
                     }
                 ]

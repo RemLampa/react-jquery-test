@@ -1,0 +1,13 @@
+#piggyWrapper {
+  #modal {
+    pointer-events: all;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 250px;
+    background-color: cornsilk;
+    padding: 25px;
+  }
+}
