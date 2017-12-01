@@ -30,8 +30,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "*://blank.org/"
       ],
       "js": [
         "scripts/vendor.js",
