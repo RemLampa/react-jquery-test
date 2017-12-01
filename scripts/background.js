@@ -1,1 +1,1 @@
-webpackJsonp([2],{35:function(o,c,n){o.exports=n(36)},36:function(o,c,n){"use strict";console.log("Hello Background Scripts!")}},[35]);
+webpackJsonp([2],{36:function(o,c,n){o.exports=n(37)},37:function(o,c,n){"use strict";console.log("%c Hello Background Scripts!","color: orange")}},[36]);
