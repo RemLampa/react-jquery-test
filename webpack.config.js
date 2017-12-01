@@ -115,8 +115,11 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common'
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         new CopyWebpackPlugin([
-            { context: '../node_modules', from: 'jquery/dist/jquery.min.js', to: 'scripts' },
             { from: 'manifest.json' }
         ])
     ],
@@ -126,6 +129,9 @@ module.exports = {
             path.join(__dirname, 'src', 'js'),
             'node_modules'
         ]
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, 'src')
     },
     devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map'
 };
