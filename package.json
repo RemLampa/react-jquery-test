@@ -7,7 +7,7 @@
     "dev": "./node_modules/.bin/webpack --progress --colors",
     "dev:watch": "npm run dev -- --watch",
     "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "npm run lint:once && npm run test:once && NODE_ENV=production npm run dev -- -p",
+    "build": "NODE_ENV=production npm run dev -- -p",
     "gh-pages": "./node_modules/.bin/gh-pages -d dist -b gh-pages",
     "deploy": "npm run build && npm run gh-pages"
   },
