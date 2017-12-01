@@ -1,0 +1,1 @@
+webpackJsonp([2],{34:function(o,c,n){o.exports=n(35)},35:function(o,c,n){"use strict";console.log("Hello Background Scripts!")}},[34]);
